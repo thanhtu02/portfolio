@@ -45,7 +45,7 @@ const Single = ({ item }) => {
           <div className="imageContainer" ref={ref}>
             <img src={item.img} alt="" />
           </div>
-          <motion.div className="textContainer" style={{y}}>
+          <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <button>See Demo</button>
@@ -57,13 +57,16 @@ const Single = ({ item }) => {
 };
 
 const Portfolio = () => {
-  const ref = useRef();
+  const ref = useRef(); // luu tru gia tri tham chieu den 
+
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "start start"],
   });
 
+
+  //animation cho progress bar
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -73,6 +76,7 @@ const Portfolio = () => {
     <div className="portfolio" ref={ref}>
       <div className="progress">
         <h1>Featured Works</h1>
+        {/* scale progresbar theo scalex */}
         <motion.div style={{ scaleX }} className="progressBar"></motion.div>
       </div>
       {items.map((item) => (

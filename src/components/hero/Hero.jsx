@@ -49,7 +49,7 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}> TRUONG NGUYEN THANH TU </motion.h2>
           <motion.h1 variants={textVariants}>
-            Web Publisher
+            Frontend Developer
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
@@ -74,7 +74,7 @@ const Hero = () => {
         initial="initial"
         animate="animate"
       >
-        Web Publisher
+        Frontend Developer
       </motion.div>
       <div className="imageContainer">
         <img src="/hero.png" alt="" />
